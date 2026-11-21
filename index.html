@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chutamat Wongsriya (Mook) — Supply Chain &amp; Data Portfolio</title>
+  <meta name="description" content="Portfolio of Chutamat Wongsriya (Mookki) — Logistics & Supply Chain Management student specializing in Demand Planning, Production Planning, Power BI, and Excel VBA." />
+
+  <!-- Google Fonts: Playfair Display (Editorial Serif), Plus Jakarta Sans (EN), Noto Sans Thai (TH) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            amalfi: '#2E5AA7',       // Primary Deep Blue (Amalfi Tile)
+            seabreeze: '#86C5FF',    // Sky Blue (Sea Breeze)
+            citrus: '#FFA62B',       // Warm Accent (Citrus Zest)
+            gelato: '#F8E6A0',       // Soft Yellow (Cream Gelato)
+            paper: '#FFFDF6',        // Warm Paper Background
+            navy: '#162B4E',         // Deep Navy Text
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Noto Sans Thai"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Thai"', 'system-ui', 'sans-serif'],
+            thai: ['"Noto Sans Thai"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 10px 30px -10px rgba(22, 43, 78, 0.08)',
+            card: '0 16px 38px -12px rgba(46, 90, 167, 0.14)',
+            pill: '0 8px 24px -4px rgba(22, 43, 78, 0.12)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Subtle Editorial Notebook Grid Background */
+    body {
+      background-color: #FFFDF6;
+      color: #162B4E;
+      background-image:
+        linear-gradient(to right, rgba(46, 90, 167, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(46, 90, 167, 0.045) 1px, transparent 1px);
+      background-size: 36px 36px;
+      overflow-x: hidden;
+    }
+
+    body.lang-th {
+      font-family: 'Noto Sans Thai', 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Scrapbook Pocket Cards Hover Lift */
+    .pocket-card {
+      transition: transform 0.38s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+    }
+    .pocket-card:hover {
+      transform: translateY(-20px) rotate(0deg) scale(1.03) !important;
+      z-index: 30;
+      box-shadow: 0 22px 42px -12px rgba(22, 43, 78, 0.24);
+    }
+
+    /* Playful Tilted Floating Skill Pills */
+    .skill-pill {
+      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+    }
+    .skill-pill:hover {
+      transform: rotate(0deg) translateY(-4px) scale(1.05) !important;
+      box-shadow: 0 12px 22px -6px rgba(22, 43, 78, 0.18);
+      z-index: 10;
+    }
+
+    /* Scroll Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Gentle Sparkle Float */
+    @keyframes floatSparkle {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-6px) scale(1.08); }
+    }
+    .sparkle-float { animation: floatSparkle 4.2s ease-in-out infinite; }
+    .sparkle-float-delay { animation: floatSparkle 5s ease-in-out 1.2s infinite; }
+
+    /* Active Navigation State */
+    .nav-link.active {
+      color: #2E5AA7;
+      font-weight: 700;
+      background-color: rgba(134, 197, 255, 0.26);
+    }
+
+    /* Clean Horizontal Scrollbar for Lightbox Thumbnail Strip */
+    .thumb-strip::-webkit-scrollbar { height: 6px; }
+    .thumb-strip::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.08); border-radius: 9999px; }
+    .thumb-strip::-webkit-scrollbar-thumb { background: rgba(134, 197, 255, 0.55); border-radius: 9999px; }
+
+    /* Page Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #FFFDF6; }
+    ::-webkit-scrollbar-thumb { background: #86C5FF; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #2E5AA7; }
+  </style>
+</head>
+
+<body class="font-sans antialiased selection:bg-gelato selection:text-navy">
+
+  <!-- =====================================================================
+       1. FLOATING PILL TOP NAVIGATION BAR
+       ===================================================================== -->
+  <header class="fixed top-4 left-0 right-0 z-40 px-4">
+    <nav class="max-w-4xl mx-auto bg-white/92 backdrop-blur-md border border-seabreeze/45 rounded-full shadow-pill px-3 sm:px-4 py-2 flex items-center justify-between gap-2">
+
+      <!-- Brand Mark -->
+      <a href="#home" class="flex items-center gap-2.5 group pl-1 shrink-0">
+        <span class="w-9 h-9 rounded-full bg-amalfi text-paper font-serif italic font-bold text-sm flex items-center justify-center shadow-sm group-hover:bg-citrus group-hover:text-navy transition-colors">
+          CW
+        </span>
+        <span class="font-serif font-bold text-base sm:text-lg text-navy tracking-tight">Chutamat<span class="text-citrus">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="hidden md:flex items-center gap-1 text-sm font-medium text-navy/80">
+        <li><a href="#home" class="nav-link px-3 py-1.5 rounded-full hover:text-amalfi transition-colors" data-i18n="nav_home">Home</a></li>
+        <li><a href="#about" class="nav-link px-3 py-1.5 rounded-full hover:text-amalfi transition-colors" data-i18n="nav_about">About</a></li>
+        <li><a href="#skills" class="nav-link px-3 py-1.5 rounded-full hover:text-amalfi transition-colors" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link px-3 py-1.5 rounded-full hover:text-amalfi transition-colors" data-i18n="nav_experience">Experience</a></li>
+        <li><a href="#certificates" class="nav-link px-3 py-1.5 rounded-full hover:text-amalfi transition-colors" data-i18n="nav_certificates">Certificates &amp; Gallery</a></li>
+      </ul>
+
+      <!-- Right Controls: EN | TH Pill + Mobile Hamburger -->
+      <div class="flex items-center gap-2 shrink-0">
+        <button id="langToggle" type="button" aria-label="Switch Language EN / TH"
+          class="flex items-center bg-paper border border-seabreeze/60 rounded-full p-1 text-xs font-bold shadow-inner cursor-pointer">
+          <span id="langEN" class="px-2.5 py-1 rounded-full bg-amalfi text-white transition-all">EN</span>
+          <span id="langTH" class="px-2.5 py-1 rounded-full text-navy/65 transition-all">TH</span>
+        </button>
+
+        <button id="mobileMenuBtn" type="button" aria-label="Toggle Navigation Menu"
+          class="md:hidden w-9 h-9 rounded-full bg-paper border border-seabreeze/50 flex items-center justify-center text-navy hover:bg-gelato transition-colors">
+          <svg id="hamburgerIcon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="closeMenuIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden max-w-4xl mx-auto mt-2 bg-white/95 backdrop-blur-md border border-seabreeze/50 rounded-3xl shadow-card p-3">
+      <ul class="flex flex-col gap-1 text-sm font-semibold text-navy">
+        <li><a href="#home" class="mobile-nav-link block px-4 py-2.5 rounded-2xl hover:bg-gelato/40" data-i18n="nav_home">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link block px-4 py-2.5 rounded-2xl hover:bg-gelato/40" data-i18n="nav_about">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link block px-4 py-2.5 rounded-2xl hover:bg-gelato/40" data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#experience" class="mobile-nav-link block px-4 py-2.5 rounded-2xl hover:bg-gelato/40" data-i18n="nav_experience">Experience</a></li>
+        <li><a href="#certificates" class="mobile-nav-link block px-4 py-2.5 rounded-2xl hover:bg-gelato/40" data-i18n="nav_certificates">Certificates &amp; Gallery</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="pt-28 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+
+    <!-- =====================================================================
+         2. HERO SECTION WITH AMALFI SCRAPBOOK FOLDER POCKET
+         ===================================================================== -->
+    <section id="home" class="relative pt-4 sm:pt-8 pb-12 text-center">
+      <!-- Decorative Editorial Sparkles -->
+      <svg class="sparkle-float absolute top-4 left-4 sm:left-16 w-7 h-7 text-citrus pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z"/>
+      </svg>
+      <svg class="sparkle-float-delay absolute top-20 left-12 sm:left-28 w-3.5 h-3.5 text-seabreeze pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z"/>
+      </svg>
+      <svg class="sparkle-float-delay absolute top-6 right-5 sm:right-20 w-6 h-6 text-citrus pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z"/>
+      </svg>
+      <svg class="sparkle-float absolute top-24 right-12 sm:right-32 w-4 h-4 text-amalfi/45 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z"/>
+      </svg>
+
+      <!-- Editorial Headline & Subtitle -->
+      <div class="max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gelato/75 border border-citrus/35 text-xs font-bold text-navy mb-4 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-citrus animate-pulse"></span>
+          <span data-i18n="hero_badge">Open for Full-Time Roles • Supply Chain &amp; Planning</span>
+        </div>
+
+        <h1 class="font-serif font-bold text-4xl sm:text-6xl md:text-[4.25rem] text-amalfi tracking-tight leading-[1.12]">
+          <span data-i18n="hero_name">Chutamat Wongsriya</span>
+          <span class="block sm:inline italic text-navy/85 font-semibold text-2xl sm:text-4xl md:text-5xl mt-1 sm:mt-0 sm:ml-2" data-i18n="hero_nickname">(Mook)</span>
+        </h1>
+
+        <p class="mt-4 text-xs sm:text-sm font-extrabold tracking-[0.2em] uppercase text-navy/75" data-i18n="hero_subtitle">
+          SUPPLY CHAIN • DEMAND PLANNING • PRODUCTION PLANNING
+        </p>
+
+        <!-- Primary Hero CTA Buttons -->
+        <div class="mt-7 flex flex-wrap items-center justify-center gap-3">
+          <a href="#experience"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amalfi hover:bg-navy text-white font-bold text-sm shadow-card transition-all hover:-translate-y-0.5">
+            <span data-i18n="hero_cta_exp">View Experience</span>
+            <span>→</span>
+          </a>
+          <a href="#certificates"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gelato hover:bg-citrus text-navy font-bold text-sm border border-citrus/40 shadow-sm transition-all hover:-translate-y-0.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <span data-i18n="hero_cta_cert">View Certificates &amp; Dashboards</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SCRAPBOOK FOLDER POCKET CENTERPIECE (Amalfi Blue #2E5AA7) -->
+      <div class="relative max-w-5xl mx-auto mt-14 sm:mt-16 pt-6">
+        <div class="relative mx-auto w-full bg-[#22478A] rounded-t-[2.25rem] rounded-b-[2.5rem] pt-8 sm:pt-10 px-4 sm:px-8 pb-0 shadow-card border-2 border-amalfi">
+
+          <!-- 4 Tilted Polaroid / Note Cards Peeking Out -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-end relative z-10 -mt-12 sm:-mt-16 pb-10 sm:pb-12">
+
+            <!-- Card 1: Profile Photo Polaroid (Loads images/profile.jpg with smart fallback) -->
+            <div class="pocket-card bg-white p-3 rounded-2xl shadow-md border border-navy/10 text-left transform -rotate-2 sm:-rotate-3">
+              <div class="relative aspect-[4/4.2] w-full rounded-xl overflow-hidden bg-gradient-to-br from-seabreeze/35 via-paper to-gelato/65">
+                <!-- Real Profile Photo (auto-displays once images/profile.jpg exists) -->
+                <img
+                  src="images/profile.jpg"
+                  alt="Chutamat Wongsriya (Mook)"
+                  class="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-opacity duration-300"
+                  onload="this.classList.remove('opacity-0'); this.nextElementSibling.classList.add('hidden');"
+                  onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+                />
+                <!-- Smart Amalfi Missing-Image Fallback -->
+                <div class="w-full h-full flex flex-col items-center justify-center text-center p-3 border-2 border-dashed border-amalfi/30 rounded-xl">
+                  <div class="w-12 h-12 rounded-full bg-amalfi/15 text-amalfi flex items-center justify-center mb-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+                    </svg>
+                  </div>
+                  <span class="text-[11px] font-bold text-navy leading-tight" data-i18n="profile_placeholder_label">Profile Photo</span>
+                  <span class="mt-1.5 px-2 py-0.5 rounded-full bg-white/90 border border-amalfi/25 text-[10px] font-mono text-amalfi">images/profile.jpg</span>
+                </div>
+              </div>
+              <p class="mt-2.5 text-center font-serif italic font-semibold text-sm text-navy" data-i18n="card1_caption">Mook • Age 22</p>
+            </div>
+
+            <!-- Card 2: Quick Bio Note Card (Cream Gelato) -->
+            <div class="pocket-card bg-gelato p-4 sm:p-5 rounded-2xl shadow-md border border-citrus/35 text-left transform rotate-1 sm:rotate-2 flex flex-col justify-between min-h-[215px]">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-amalfi bg-white/85 px-2.5 py-0.5 rounded-full" data-i18n="card2_tag">Quick Bio</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-citrus"></span>
+              </div>
+              <p class="text-xs sm:text-[13px] leading-relaxed font-medium text-navy mt-3" data-i18n="card2_text">
+                Currently <strong>Logistics Trainee</strong> at Ichikoh Thailand.<br/><br/>
+                Ex-<strong>Demand Planning Intern</strong> at Autoliv Thailand.
+              </p>
+              <div class="mt-3 pt-2.5 border-t border-navy/10 text-[11px] font-bold text-amalfi" data-i18n="card2_foot">
+                Automotive Supply Chain
+              </div>
+            </div>
+
+            <!-- Card 3: Key Metrics Card -->
+            <div class="pocket-card bg-white p-4 sm:p-5 rounded-2xl shadow-md border border-seabreeze/65 text-left transform -rotate-1 sm:-rotate-2 flex flex-col justify-between min-h-[215px]">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-amalfi bg-seabreeze/25 px-2.5 py-0.5 rounded-full" data-i18n="card3_tag">Key Highlights</span>
+                <span class="text-citrus text-sm">✦</span>
+              </div>
+              <ul class="mt-3 space-y-2.5 text-xs font-semibold text-navy">
+                <li class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded-lg bg-gelato font-extrabold text-amalfi shrink-0">3.93</span>
+                  <span data-i18n="card3_m1">Cumulative GPA</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded-lg bg-seabreeze/30 font-extrabold text-amalfi shrink-0">5-Pg</span>
+                  <span data-i18n="card3_m2">Power BI S&amp;OP Dashboard</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded-lg bg-citrus/25 font-extrabold text-navy shrink-0">SLFTS</span>
+                  <span data-i18n="card3_m3">National Conference Presenter</span>
+                </li>
+              </ul>
+              <button type="button" onclick="openAlbum('autoliv', 0)"
+                class="mt-3 w-full text-center text-[11px] font-bold text-amalfi bg-paper hover:bg-gelato border border-seabreeze/50 py-1.5 rounded-xl transition-colors cursor-pointer" data-i18n="card3_btn">
+                Preview Dashboards →
+              </button>
+            </div>
+
+            <!-- Card 4: Location / Education Badge Card -->
+            <div class="pocket-card bg-paper p-4 sm:p-5 rounded-2xl shadow-md border border-navy/10 text-left transform rotate-2 sm:rotate-3 flex flex-col justify-between min-h-[215px] relative overflow-hidden">
+              <!-- Decorative Map Lines -->
+              <svg class="absolute inset-0 w-full h-full opacity-25 pointer-events-none" viewBox="0 0 180 200" fill="none">
+                <path d="M-10 42 Q 65 65 190 22" stroke="#2E5AA7" stroke-width="6"/>
+                <path d="M24 -10 Q 55 95 130 210" stroke="#86C5FF" stroke-width="8"/>
+                <path d="M-10 142 Q 90 120 190 165" stroke="#2E5AA7" stroke-width="4"/>
+              </svg>
+              <div class="relative z-10 flex items-center justify-between">
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-navy bg-white/90 px-2.5 py-0.5 rounded-full border border-seabreeze/40" data-i18n="card4_tag">Base</span>
+                <span class="w-8 h-8 rounded-full bg-white shadow flex items-center justify-center text-citrus">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="relative z-10 mt-auto bg-white/95 backdrop-blur-sm rounded-xl p-3 border border-seabreeze/50 shadow-sm">
+                <p class="text-xs font-extrabold text-amalfi" data-i18n="card4_uni">Burapha University</p>
+                <p class="text-[11px] font-semibold text-navy/80 mt-0.5" data-i18n="card4_loc">Chonburi, Thailand</p>
+                <p class="text-[10px] text-navy/60 mt-1" data-i18n="card4_faculty">Faculty of Logistics • B.Sc.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Front Amalfi Blue Pocket Flap -->
+          <div class="relative z-20 -mx-4 sm:-mx-8 bg-amalfi rounded-t-[1.75rem] rounded-b-[2.35rem] px-6 py-5 sm:py-6 border-t-2 border-seabreeze/45 shadow-inner">
+            <div class="border-t-2 border-dashed border-gelato/40 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <span class="font-serif italic text-2xl sm:text-3xl text-gelato tracking-wide">Ciao!</span>
+                <span class="text-xs sm:text-sm text-paper/90 text-left" data-i18n="pocket_tagline">
+                  Turning supply chain operations &amp; data into measurable clarity.
+                </span>
+              </div>
+              <span class="text-[11px] font-bold uppercase tracking-widest text-seabreeze/95 shrink-0" data-i18n="pocket_badge">
+                Portfolio • 2026
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. ABOUT ME & EDUCATION BENTO GRID (#about)
+         ===================================================================== -->
+    <section id="about" class="pt-12 sm:pt-16 pb-10">
+      <div class="reveal mb-8 max-w-3xl">
+        <p class="text-xs font-extrabold uppercase tracking-[0.22em] text-amalfi mb-2" data-i18n="about_eyebrow">About &amp; Education</p>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-[2.6rem] leading-tight text-navy">
+          <span data-i18n="about_heading_1">systematic problem-solving meets</span>
+          <span class="italic text-amalfi" data-i18n="about_heading_2">hands-on planning.</span>
+        </h2>
+      </div>
+
+      <!-- 3-Card Bento Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- CARD 1: ABOUT ME -->
+        <div class="reveal lg:col-span-5 bg-gelato/65 border border-citrus/35 rounded-[2rem] p-6 sm:p-7 shadow-soft flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="px-3 py-1 rounded-full bg-white text-amalfi text-xs font-extrabold uppercase tracking-wider shadow-sm" data-i18n="about_tag">
+                About Me
+              </span>
+              <span class="text-xs font-bold text-navy/75 bg-white/60 px-3 py-1 rounded-full" data-i18n="about_age">
+                Age 22
+              </span>
+            </div>
+
+            <h3 class="font-serif font-bold text-2xl sm:text-3xl text-navy">
+              Chutamat Wongsriya <span class="italic text-amalfi font-semibold">(Mook)</span>
+            </h3>
+
+            <p class="mt-3 text-sm sm:text-[15px] leading-relaxed text-navy/85" data-i18n="about_bio">
+              Driven and systematic Supply Chain &amp; Logistics Management student passionate about Demand Planning, Production Planning, and Data Analytics. I enjoy building practical automation tools—from Power BI S&amp;OP dashboards to Excel VBA workflows—that simplify daily factory planning and improve operational visibility.
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-bold text-navy border border-navy/10" data-i18n="trait_1">✦ Systematic Thinker</span>
+              <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-bold text-navy border border-navy/10" data-i18n="trait_2">✦ Data Automation</span>
+              <span class="px-3 py-1 rounded-full bg-white/90 text-xs font-bold text-navy border border-navy/10" data-i18n="trait_3">✦ Collaborative</span>
+            </div>
+          </div>
+
+          <!-- Safe Public Contact Links (No Phone Number or Home Address) -->
+          <div class="mt-6 pt-5 border-t border-navy/10 flex flex-wrap gap-2.5">
+            <button type="button" onclick="copyEmail()"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-amalfi text-white text-xs sm:text-sm font-bold hover:bg-navy transition-colors shadow-sm cursor-pointer">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+              </svg>
+              <span>mookkichutamat@gmail.com</span>
+            </button>
+
+            <a href="https://github.com/Mookki09" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white text-navy text-xs sm:text-sm font-bold border border-navy/15 hover:border-amalfi hover:text-amalfi transition-colors shadow-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .322.216.694.825.576C20.565 21.795 24 17.298 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <!-- UPDATE LINKEDIN URL HERE: Replace "https://linkedin.com/in/your-profile" with your real LinkedIn URL -->
+            <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-white text-navy text-xs sm:text-sm font-bold border border-navy/15 hover:border-amalfi hover:text-amalfi transition-colors shadow-sm">
+              <svg class="w-4 h-4 text-amalfi" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+        <!-- CARD 2: EDUCATION TIMELINE -->
+        <div class="reveal lg:col-span-7 bg-white border border-seabreeze/65 rounded-[2rem] p-6 sm:p-7 shadow-soft">
+          <div class="flex items-center justify-between gap-2 mb-6">
+            <h3 class="font-serif font-bold text-2xl sm:text-3xl text-navy" data-i18n="edu_title">Education</h3>
+            <span class="text-xs font-bold px-3 py-1 rounded-full bg-seabreeze/25 text-amalfi" data-i18n="edu_badge">Academic Background</span>
+          </div>
+
+          <div class="space-y-7 relative before:absolute before:left-[11px] before:top-3 before:bottom-3 before:w-0.5 before:bg-seabreeze/55">
+            <!-- Burapha University -->
+            <div class="relative pl-8">
+              <span class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-amalfi border-4 border-seabreeze/40"></span>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h4 class="font-bold text-base sm:text-lg text-navy" data-i18n="edu_uni_name">Burapha University</h4>
+                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gelato text-navy">GPA 3.93</span>
+              </div>
+              <p class="text-xs sm:text-sm font-bold text-amalfi mt-0.5" data-i18n="edu_uni_degree">
+                B.Sc. in Logistics and Supply Chain Management (Supply Chain Engineering Focus)
+              </p>
+              <p class="text-xs font-medium text-navy/60 mt-0.5" data-i18n="edu_uni_meta">
+                Faculty of Logistics • 2023 – Present
+              </p>
+              <p class="mt-2.5 text-xs sm:text-sm text-navy/80 leading-relaxed" data-i18n="edu_uni_courses">
+                <strong>Relevant Coursework:</strong> Business Data Analytics, Operations Management, Warehousing &amp; Inventory Management, Quality Management, Programming for Data Science.
+              </p>
+            </div>
+
+            <!-- High School -->
+            <div class="relative pl-8">
+              <span class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-seabreeze border-4 border-paper"></span>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h4 class="font-bold text-base sm:text-lg text-navy" data-i18n="edu_hs_name">Triam Udom Suksa School of the Northeast</h4>
+                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-paper border border-seabreeze/60 text-navy">GPA 3.86</span>
+              </div>
+              <p class="text-xs sm:text-sm text-navy/70 mt-0.5" data-i18n="edu_hs_meta">
+                โรงเรียนเตรียมอุดมศึกษา ภาคตะวันออกเฉียงเหนือ • Class of 2023 (2566)
+              </p>
+            </div>
+          </div>
+          <!-- กล่องเติมพื้นที่ว่าง: วิชาเด่นที่ได้เกรด A -->
+<div class="mt-6 pt-5 border-t border-dashed border-[#86C5FF]/60 space-y-4">
+  <div class="flex items-center justify-between flex-wrap gap-2">
+    <span class="text-xs font-bold uppercase tracking-wider text-[#2E5AA7]">
+      Key Coursework Highlights
+    </span>
+    <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#F8E6A0] text-[#1E3A6E]">
+      ★ Grade A in All Listed Courses
+    </span>
+  </div>
+  <!-- กลุ่มที่ 1: Supply Chain & Planning -->
+  <div>
+    <p class="text-xs font-semibold text-slate-500 mb-2">Supply Chain &amp; Planning</p>
+    <div class="flex flex-wrap gap-1.5">
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#86C5FF]/20 text-[#1E3A6E]">Supply Chain Network Design</span>
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#86C5FF]/20 text-[#1E3A6E]">Operations Research I</span>
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#86C5FF]/20 text-[#1E3A6E]">Operations Management</span>
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#86C5FF]/20 text-[#1E3A6E]">Warehousing &amp; Inventory</span>
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#86C5FF]/20 text-[#1E3A6E]">Computer Simulation I</span>
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#86C5FF]/20 text-[#1E3A6E]">Freight &amp; Distribution</span>
+    </div>
+  </div>
+
+  <!-- กลุ่มที่ 2: Data, Analytics & Tech -->
+  <div>
+    <p class="text-xs font-semibold text-slate-500 mb-2">Data, Analytics &amp; Industrial Tech</p>
+    <div class="flex flex-wrap gap-1.5">
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#F8E6A0]/60 text-[#1E3A6E]">Business Data Analytics</span>
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#F8E6A0]/60 text-[#1E3A6E]">Advanced Excel Techniques</span>
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#F8E6A0]/60 text-[#1E3A6E]">Programming for Data Science</span>
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#F8E6A0]/60 text-[#1E3A6E]">Data Structure &amp; Algorithms</span>
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#F8E6A0]/60 text-[#1E3A6E]">Automation Systems</span>
+      <span class="px-2.5 py-1 text-xs font-medium rounded-lg bg-[#F8E6A0]/60 text-[#1E3A6E]">Intro to AI</span>
+    </div>
+  </div>
+
+  <!-- แถบปิดท้าย -->
+  <div class="pt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500">
+    <span>• <strong>117</strong> Credits Earned</span>
+    <span>• Cooperative Education (CWIE) &amp; Senior Project Track</span>
+  </div>
+</div>
+        </div>
+
+        <!-- CARD 3: AWARDS & HIGHLIGHTS (Full-Width Horizontal Bento Strip) -->
+        <div class="reveal lg:col-span-12 bg-seabreeze/20 border border-seabreeze/55 rounded-[2rem] p-6 sm:p-7 shadow-soft">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-5">
+            <h3 class="font-serif font-bold text-2xl text-navy" data-i18n="awards_title">Awards &amp; Highlights</h3>
+            <a href="#certificates" class="text-xs font-bold text-amalfi hover:underline" data-i18n="awards_link">View Certificates &amp; Photos →</a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Award 1 -->
+            <div onclick="openAlbum('competition', 0)" class="cursor-pointer group bg-white/95 hover:bg-white rounded-2xl p-4 sm:p-5 border border-seabreeze/45 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-citrus text-navy">2024</span>
+                <span class="text-[11px] font-bold text-amalfi group-hover:translate-x-0.5 transition-transform" data-i18n="open_photos_short">3 Photos ↗</span>
+              </div>
+              <h4 class="font-bold text-sm sm:text-base text-navy" data-i18n="award1_title">Best Inventory Management Award</h4>
+              <p class="text-xs text-navy/70 mt-1" data-i18n="award1_desc">Winner for strategic planning in the 2024 Logistics Simulation Game Competition.</p>
+            </div>
+
+            <!-- Award 2 -->
+            <div onclick="openAlbum('conference', 0)" class="cursor-pointer group bg-white/95 hover:bg-white rounded-2xl p-4 sm:p-5 border border-seabreeze/45 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-amalfi text-white">SLFTS</span>
+                <span class="text-[11px] font-bold text-amalfi group-hover:translate-x-0.5 transition-transform" data-i18n="open_photos_short">3 Photos ↗</span>
+              </div>
+              <h4 class="font-bold text-sm sm:text-base text-navy" data-i18n="award2_title">SLFTS National Academic Conference Presenter</h4>
+              <p class="text-xs text-navy/70 mt-1" data-i18n="award2_desc">Presented the Autoliv Demand &amp; Capacity S&amp;OP Automation project at Burapha University.</p>
+            </div>
+
+            <!-- Award 3 -->
+            <div onclick="openAlbum('staff', 0)" class="cursor-pointer group bg-white/95 hover:bg-white rounded-2xl p-4 sm:p-5 border border-seabreeze/45 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+              <div class="flex items-center justify-between gap-2 mb-2">
+                <span class="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-gelato text-navy">2025</span>
+                <span class="text-[11px] font-bold text-amalfi group-hover:translate-x-0.5 transition-transform" data-i18n="open_photos_short">3 Photos ↗</span>
+              </div>
+              <h4 class="font-bold text-sm sm:text-base text-navy" data-i18n="award3_title">Logistics Simulation Game Staff Coordinator</h4>
+              <p class="text-xs text-navy/70 mt-1" data-i18n="award3_desc">Coordinated event operations and venue management for the 2025 Simulation Game.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. SKILLS SECTION WITH FILTERABLE TABS & TILTED FLOATING PILLS (#skills)
+         ===================================================================== -->
+    <section id="skills" class="pt-12 sm:pt-16 pb-10">
+      <div class="reveal bg-gradient-to-br from-citrus via-[#FFB84D] to-gelato rounded-[2.25rem] p-6 sm:p-9 shadow-card border border-citrus/45 relative overflow-hidden">
+        <!-- Decorative Soft Blob -->
+        <div class="absolute -right-14 -top-14 w-56 h-56 rounded-full bg-white/20 pointer-events-none"></div>
+        <div class="absolute -left-12 -bottom-16 w-48 h-48 rounded-full bg-amalfi/10 pointer-events-none"></div>
+
+        <div class="relative z-10">
+          <!-- Header & Filter Tabs -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-7">
+            <div>
+              <p class="text-xs font-extrabold uppercase tracking-[0.22em] text-navy/75 mb-1.5" data-i18n="skills_eyebrow">Capabilities</p>
+              <h2 class="font-serif font-bold text-3xl sm:text-4xl text-navy" data-i18n="skills_title">Skills &amp; Toolkit</h2>
+              <p class="text-sm text-navy/80 mt-1" data-i18n="skills_subtitle">Click a category tab to filter my technical, planning, and interpersonal skills.</p>
+            </div>
+
+            <!-- Interactive Filter Category Tabs -->
+            <div class="flex flex-wrap gap-1.5 bg-white/45 backdrop-blur-sm p-1.5 rounded-2xl sm:rounded-full self-start md:self-auto">
+              <button type="button" data-filter="all" class="skill-tab px-3.5 py-1.5 rounded-full text-xs font-bold bg-navy text-white shadow-sm transition-all cursor-pointer" data-i18n="tab_all">All</button>
+              <button type="button" data-filter="data" class="skill-tab px-3.5 py-1.5 rounded-full text-xs font-bold text-navy hover:bg-white/70 transition-all cursor-pointer" data-i18n="tab_data">Data &amp; Tools</button>
+              <button type="button" data-filter="planning" class="skill-tab px-3.5 py-1.5 rounded-full text-xs font-bold text-navy hover:bg-white/70 transition-all cursor-pointer" data-i18n="tab_planning">Supply Chain &amp; Planning</button>
+              <button type="button" data-filter="soft" class="skill-tab px-3.5 py-1.5 rounded-full text-xs font-bold text-navy hover:bg-white/70 transition-all cursor-pointer" data-i18n="tab_soft">Languages &amp; Soft Skills</button>
+            </div>
+          </div>
+
+          <!-- Playful Floating Skill Pills Container -->
+          <div id="skillsCloud" class="flex flex-wrap gap-3 items-center py-2">
+            <!-- Data & Tools (Amalfi Dot) -->
+            <span data-cat="data" class="skill-pill inline-flex items-center gap-2 bg-white text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform -rotate-2 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-amalfi"></span>
+              <span data-i18n="sk_pbi">Power BI (Dashboard, DAX)</span>
+            </span>
+            <span data-cat="data" class="skill-pill inline-flex items-center gap-2 bg-paper text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform rotate-1 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-amalfi"></span>
+              <span data-i18n="sk_excel">Microsoft Excel (Power Query, VBA, XLOOKUP, VLOOKUP, Pivot Tables)</span>
+            </span>
+            <span data-cat="data" class="skill-pill inline-flex items-center gap-2 bg-white text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform -rotate-1 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-amalfi"></span>
+              <span data-i18n="sk_py">Python (NumPy, Pandas)</span>
+            </span>
+            <span data-cat="data" class="skill-pill inline-flex items-center gap-2 bg-paper text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform rotate-2 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-amalfi"></span>
+              <span data-i18n="sk_sp">SharePoint</span>
+            </span>
+            <span data-cat="data" class="skill-pill inline-flex items-center gap-2 bg-white text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform -rotate-2 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-amalfi"></span>
+              <span data-i18n="sk_erp">ERP / Data Hub</span>
+            </span>
+            <span data-cat="data" class="skill-pill inline-flex items-center gap-2 bg-paper text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform rotate-1 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-amalfi"></span>
+              <span data-i18n="sk_office">MS Office &amp; Canva</span>
+            </span>
+
+            <!-- Supply Chain & Planning (Citrus Dot) -->
+            <span data-cat="planning" class="skill-pill inline-flex items-center gap-2 bg-white text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform rotate-2 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-citrus"></span>
+              <span data-i18n="sk_dp">Demand Planning</span>
+            </span>
+            <span data-cat="planning" class="skill-pill inline-flex items-center gap-2 bg-paper text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform -rotate-2 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-citrus"></span>
+              <span data-i18n="sk_pp">Production Planning</span>
+            </span>
+            <span data-cat="planning" class="skill-pill inline-flex items-center gap-2 bg-white text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform rotate-1 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-citrus"></span>
+              <span data-i18n="sk_supply">Supply Planning</span>
+            </span>
+            <span data-cat="planning" class="skill-pill inline-flex items-center gap-2 bg-paper text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform -rotate-1 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-citrus"></span>
+              <span data-i18n="sk_siop">SIOP &amp; MPS</span>
+            </span>
+            <span data-cat="planning" class="skill-pill inline-flex items-center gap-2 bg-white text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform rotate-2 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-citrus"></span>
+              <span data-i18n="sk_shortage">Material Shortage Tracking</span>
+            </span>
+            <span data-cat="planning" class="skill-pill inline-flex items-center gap-2 bg-paper text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform -rotate-2 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-citrus"></span>
+              <span data-i18n="sk_inv">Inventory Management</span>
+            </span>
+            <span data-cat="planning" class="skill-pill inline-flex items-center gap-2 bg-white text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform rotate-1 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-citrus"></span>
+              <span data-i18n="sk_forecast">Statistical Forecasting (SMA, WMA, Regression)</span>
+            </span>
+
+            <!-- Languages & Soft Skills (Sea Breeze Dot) -->
+            <span data-cat="soft" class="skill-pill inline-flex items-center gap-2 bg-paper text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform -rotate-1 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-seabreeze"></span>
+              <span data-i18n="sk_th">Thai (Native)</span>
+            </span>
+            <span data-cat="soft" class="skill-pill inline-flex items-center gap-2 bg-white text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform rotate-2 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-seabreeze"></span>
+              <span data-i18n="sk_en">English (Intermediate)</span>
+            </span>
+            <span data-cat="soft" class="skill-pill inline-flex items-center gap-2 bg-paper text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform -rotate-2 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-seabreeze"></span>
+              <span data-i18n="sk_ps">Systematic Problem-Solving</span>
+            </span>
+            <span data-cat="soft" class="skill-pill inline-flex items-center gap-2 bg-white text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform rotate-1 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-seabreeze"></span>
+              <span data-i18n="sk_team">Cross-Functional Teamwork</span>
+            </span>
+            <span data-cat="soft" class="skill-pill inline-flex items-center gap-2 bg-paper text-navy text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full shadow-sm transform -rotate-1 cursor-default">
+              <span class="w-2.5 h-2.5 rounded-full bg-seabreeze"></span>
+              <span data-i18n="sk_ai">Digital &amp; AI Literacy</span>
+            </span>
+          </div>
+
+          <!-- Category Legend -->
+          <div class="mt-6 pt-4 border-t border-navy/10 flex flex-wrap gap-5 text-xs font-bold text-navy/85">
+            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amalfi"></span> <span data-i18n="tab_data">Data &amp; Tools</span></span>
+            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-white border border-citrus"></span> <span data-i18n="tab_planning">Supply Chain &amp; Planning</span></span>
+            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-seabreeze"></span> <span data-i18n="tab_soft">Languages &amp; Soft Skills</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. EXPERIENCE & PROJECTS SECTION (#experience)
+         ===================================================================== -->
+    <section id="experience" class="pt-14 sm:pt-20 pb-10">
+      <div class="reveal mb-10 max-w-4xl">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-serif text-2xl sm:text-3xl text-navy/80" data-i18n="exp_eyebrow">hands-on</span>
+          <span class="inline-block font-serif italic font-bold text-2xl sm:text-3xl px-4 py-1 rounded-xl bg-gelato border-2 border-amalfi/25 text-amalfi transform -rotate-2 shadow-sm" data-i18n="exp_badge">
+            Experience
+          </span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-[2.65rem] leading-tight text-navy">
+          <span data-i18n="exp_heading_1">real factory planning,</span>
+          <span class="italic font-bold text-amalfi" data-i18n="exp_heading_2">automation tools,</span>
+          <span data-i18n="exp_heading_3">and measurable impact.</span>
+        </h2>
+      </div>
+
+      <!-- Impact-First Internship Cards -->
+      <div class="space-y-8">
+
+        <!-- CARD 1: ICHIKOH INDUSTRIES (THAILAND) -->
+        <article class="reveal bg-white rounded-[2.25rem] border border-seabreeze/65 shadow-card p-5 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+          <!-- Left: Impact Metrics & Role Summary -->
+          <div class="lg:col-span-5 bg-paper rounded-[1.75rem] p-6 border border-seabreeze/50 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="px-3 py-1 rounded-full bg-amalfi text-white text-xs font-bold" data-i18n="ichikoh_status">Current Trainee</span>
+                <span class="text-xs font-bold text-amalfi" data-i18n="ichikoh_track">Production &amp; Supply Planning</span>
+              </div>
+              <h3 class="mt-4 font-serif font-bold text-2xl sm:text-[1.7rem] text-navy leading-snug">
+                Ichikoh Industries (Thailand) Co., Ltd.
+              </h3>
+              <p class="mt-1 text-sm font-bold text-amalfi" data-i18n="ichikoh_role">Logistics Trainee</p>
+            </div>
+
+            <!-- Key Focus Metrics -->
+            <div class="mt-6 pt-5 border-t border-navy/10 grid grid-cols-2 gap-4">
+              <div>
+                <p class="font-serif font-bold text-2xl sm:text-3xl text-amalfi" data-i18n="ichikoh_m1_val">Daily</p>
+                <p class="text-xs text-navy/70 mt-1" data-i18n="ichikoh_m1_lbl">Material Check Shortage Reporting</p>
+              </div>
+              <div>
+                <p class="font-serif font-bold text-2xl sm:text-3xl text-citrus">SIOP &amp; MPS</p>
+                <p class="text-xs text-navy/70 mt-1" data-i18n="ichikoh_m2_lbl">Manager Planning Support</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Operational Responsibilities & Tags -->
+          <div class="lg:col-span-7 flex flex-col justify-between gap-5 py-1">
+            <div>
+              <h4 class="text-xs font-extrabold uppercase tracking-widest text-navy/60 mb-3" data-i18n="key_duties_lbl">Key Duties &amp; Operations</h4>
+              <ul class="space-y-3 text-sm sm:text-[15px] text-navy/85 leading-relaxed">
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-seabreeze/30 text-amalfi flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
+                  <span data-i18n="ichikoh_b1">Prepare and verify the <strong>Daily Material Check Shortage Report</strong>, tracking real-time material availability to prevent production line stoppages.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-seabreeze/30 text-amalfi flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
+                  <span data-i18n="ichikoh_b2">Support the Logistics Manager in preparing <strong>SIOP</strong> (Sales, Inventory, and Operations Planning) and <strong>MPS</strong> (Master Production Schedule) plans.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-seabreeze/30 text-amalfi flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
+                  <span data-i18n="ichikoh_b3">Conduct hands-on <strong>on-site production line coordination</strong>, verifying physical stock status directly on the shop floor alongside manufacturing teams.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-navy/10 flex flex-wrap items-center justify-between gap-3">
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-full bg-paper border border-seabreeze/60 text-xs font-bold text-navy">Check Shortage Report</span>
+                <span class="px-3 py-1 rounded-full bg-paper border border-seabreeze/60 text-xs font-bold text-navy">SIOP &amp; MPS</span>
+                <span class="px-3 py-1 rounded-full bg-paper border border-seabreeze/60 text-xs font-bold text-navy">Production Line Ops</span>
+                <span class="px-3 py-1 rounded-full bg-paper border border-seabreeze/60 text-xs font-bold text-navy">Supply Planning</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2: AUTOLIV (THAILAND) -->
+        <article class="reveal bg-white rounded-[2.25rem] border-2 border-citrus/45 shadow-card p-5 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+          <!-- Left: Impact Metrics & Role Summary -->
+          <div class="lg:col-span-5 bg-gelato/45 rounded-[1.75rem] p-6 border border-citrus/35 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="px-3 py-1 rounded-full bg-citrus text-navy text-xs font-extrabold" data-i18n="autoliv_tag">Featured Internship</span>
+                <span class="text-xs font-bold text-amalfi">SLFTS Presenter</span>
+              </div>
+              <h3 class="mt-4 font-serif font-bold text-2xl sm:text-[1.7rem] text-navy leading-snug">
+                Autoliv (Thailand) Co., Ltd.
+              </h3>
+              <p class="mt-1 text-sm font-bold text-amalfi" data-i18n="autoliv_role">Demand Planning Intern</p>
+            </div>
+
+            <!-- Hard Quantitative Impact Metrics -->
+            <div class="mt-6 pt-5 border-t border-navy/10 grid grid-cols-3 gap-3">
+              <div>
+                <p class="font-serif font-bold text-2xl sm:text-3xl text-amalfi">5-Pg</p>
+                <p class="text-[11px] text-navy/75 mt-1 leading-tight" data-i18n="autoliv_m1">Power BI S&amp;OP Hub</p>
+              </div>
+              <div>
+                <p class="font-serif font-bold text-2xl sm:text-3xl text-citrus">100%</p>
+                <p class="text-[11px] text-navy/75 mt-1 leading-tight" data-i18n="autoliv_m2">Data Mapping Accuracy</p>
+              </div>
+              <div>
+                <p class="font-serif font-bold text-2xl sm:text-3xl text-navy">4.37<span class="text-sm font-sans">/5</span></p>
+                <p class="text-[11px] text-navy/75 mt-1 leading-tight" data-i18n="autoliv_m3">User Satisfaction</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Achievements + Direct Button to Open Autoliv Lightbox Album -->
+          <div class="lg:col-span-7 flex flex-col justify-between gap-5 py-1">
+            <div>
+              <h4 class="text-xs font-extrabold uppercase tracking-widest text-navy/60 mb-3" data-i18n="key_achieve_lbl">Key Achievements &amp; Automation</h4>
+              <ul class="space-y-3 text-sm sm:text-[15px] text-navy/85 leading-relaxed">
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-gelato text-amalfi flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✦</span>
+                  <span data-i18n="autoliv_b1">Built a real-time <strong>5-page Power BI Demand &amp; Capacity Automation Dashboard</strong> with automated email alerts, integrating Power Query, DAX, SharePoint, and ERP data (100% Data Mapping Accuracy, 4.37/5.00 user satisfaction).</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-gelato text-amalfi flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✦</span>
+                  <span data-i18n="autoliv_b2">Developed an <strong>Excel VBA automation tool</strong> to receive incoming customer demand files and import them into the system significantly faster with fewer manual errors.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-6 h-6 rounded-full bg-gelato text-amalfi flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✦</span>
+                  <span data-i18n="autoliv_b3">Presented this project at the <strong>SLFTS National Academic Conference</strong> at Burapha University.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tools + Prominent Action Button to Open Autoliv 6-Photo Album -->
+            <div class="pt-4 border-t border-navy/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-full bg-paper border border-navy/10 text-xs font-bold text-navy">Power BI &amp; DAX</span>
+                <span class="px-2.5 py-1 rounded-full bg-paper border border-navy/10 text-xs font-bold text-navy">Power Query</span>
+                <span class="px-2.5 py-1 rounded-full bg-paper border border-navy/10 text-xs font-bold text-navy">Excel VBA</span>
+                <span class="px-2.5 py-1 rounded-full bg-paper border border-navy/10 text-xs font-bold text-navy">SharePoint &amp; ERP</span>
+              </div>
+
+              <button type="button" onclick="openAlbum('autoliv', 0)"
+                class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-amalfi hover:bg-citrus hover:text-navy text-white font-bold text-xs sm:text-sm shadow-md transition-all hover:-translate-y-0.5 shrink-0 cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span data-i18n="autoliv_album_btn">View 5-Page Dashboard &amp; Cert (6 Photos)</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ADDITIONAL ACADEMIC PROJECTS GRID (2 Compact Cards) -->
+      <div class="mt-12">
+        <div class="reveal flex items-center gap-2 mb-5">
+          <span class="w-2.5 h-2.5 rounded-full bg-citrus"></span>
+          <h3 class="text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] text-navy/75" data-i18n="acad_proj_heading">Additional Academic Projects</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Academic Project 1: Instant Noodle Exports -->
+          <article class="reveal bg-white rounded-[2rem] border border-seabreeze/60 shadow-soft p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-gelato text-navy" data-i18n="proj1_tag">Quantitative Forecasting</span>
+                <span class="text-xs font-bold text-amalfi">2000–2024 Data</span>
+              </div>
+              <h4 class="font-serif font-bold text-xl sm:text-2xl text-navy leading-snug" data-i18n="proj1_title">
+                Forecasting Thailand’s Instant Noodle Exports
+              </h4>
+              <p class="mt-2.5 text-sm text-navy/80 leading-relaxed" data-i18n="proj1_desc">
+                Analyzed 24 years of export data (2000–2023) using SMA, WMA, Exponential Smoothing, and Linear Regression to guide production and inventory planning.
+              </p>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-navy/10 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-5">
+                <div>
+                  <p class="font-serif font-bold text-2xl text-amalfi">9.85%</p>
+                  <p class="text-[11px] font-semibold text-navy/65" data-i18n="proj1_k1">MAPE (Regression)</p>
+                </div>
+                <div>
+                  <p class="font-serif font-bold text-2xl text-citrus">62,239</p>
+                  <p class="text-[11px] font-semibold text-navy/65" data-i18n="proj1_k2">2024 Forecast Units</p>
+                </div>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-paper border border-seabreeze/60 text-xs font-bold text-navy">Microsoft Excel</span>
+            </div>
+          </article>
+
+          <!-- Academic Project 2: Blinkit Quick-Commerce Dashboard -->
+          <article class="reveal bg-white rounded-[2rem] border border-seabreeze/60 shadow-soft p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-seabreeze/30 text-amalfi" data-i18n="proj2_tag">Quick-Commerce BI</span>
+                <span class="text-xs font-bold text-citrus">Interactive Dashboard</span>
+              </div>
+              <h4 class="font-serif font-bold text-xl sm:text-2xl text-navy leading-snug" data-i18n="proj2_title">
+                Blinkit Quick-Commerce Dashboard Project
+              </h4>
+              <p class="mt-2.5 text-sm text-navy/80 leading-relaxed" data-i18n="proj2_desc">
+                Built an interactive Excel &amp; Power BI dashboard tracking dark-store warehouse inventory levels, rapid shipping times, and member subscriptions for data-driven operations.
+              </p>
+            </div>
+
+            <div class="mt-5 pt-4 border-t border-navy/10 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-5">
+                <div>
+                  <p class="font-serif font-bold text-2xl text-amalfi">10–20m</p>
+                  <p class="text-[11px] font-semibold text-navy/65" data-i18n="proj2_k1">Delivery SLA Focus</p>
+                </div>
+                <div>
+                  <p class="font-serif font-bold text-2xl text-citrus">360°</p>
+                  <p class="text-[11px] font-semibold text-navy/65" data-i18n="proj2_k2">Inventory &amp; Shipping</p>
+                </div>
+              </div>
+              <div class="flex gap-1.5">
+                <span class="px-3 py-1 rounded-full bg-paper border border-seabreeze/60 text-xs font-bold text-navy">Excel</span>
+                <span class="px-3 py-1 rounded-full bg-paper border border-seabreeze/60 text-xs font-bold text-navy">Power BI</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. CERTIFICATES & PHOTO GALLERY ALBUMS SECTION (#certificates)
+         ===================================================================== -->
+    <section id="certificates" class="pt-14 sm:pt-20 pb-12">
+      <div class="reveal mb-9 flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div class="max-w-3xl">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="font-serif text-2xl sm:text-3xl text-navy/80" data-i18n="cert_eyebrow">verified proof of work</span>
+            <span class="inline-block font-serif italic font-bold text-2xl sm:text-3xl px-4 py-1 rounded-xl bg-seabreeze/30 border-2 border-amalfi/20 text-amalfi transform rotate-1 shadow-sm" data-i18n="cert_badge">
+              Gallery
+            </span>
+          </div>
+          <h2 class="font-serif font-bold text-3xl sm:text-4xl text-navy" data-i18n="cert_title">
+            Certificates &amp; Photo Albums
+          </h2>
+          <p class="mt-2 text-sm sm:text-base text-navy/75" data-i18n="cert_subtitle">
+            Click any album card or thumbnail below to browse full-size certificates, Power BI dashboard pages, and event photos.
+          </p>
+        </div>
+
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-seabreeze/60 shadow-sm text-xs font-bold text-amalfi self-start md:self-auto">
+          <span>4 Albums • 15 Photos</span>
+        </div>
+      </div>
+
+      <!-- 2x2 Bento Album Grid (Dynamically Rendered by JS from ALBUMS) -->
+      <div id="albumGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-7">
+        <!-- Populated automatically by renderAlbumGrid() -->
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         7. WARM AMALFI FOOTER
+         ===================================================================== -->
+    <footer class="reveal mt-8">
+      <div class="bg-amalfi text-paper rounded-[2.5rem] p-8 sm:p-12 shadow-card relative overflow-hidden">
+        <!-- Decorative Mediterranean Circles -->
+        <div class="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-seabreeze/15 pointer-events-none"></div>
+        <div class="absolute -bottom-20 -left-16 w-60 h-60 rounded-full bg-gelato/10 pointer-events-none"></div>
+
+        <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div class="max-w-xl">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-gelato/20 text-gelato text-xs font-bold uppercase tracking-wider mb-3" data-i18n="footer_badge">
+              Ready to Contribute
+            </span>
+            <h2 class="font-serif italic font-bold text-3xl sm:text-5xl text-gelato" data-i18n="footer_title">
+              Let’s connect!
+            </h2>
+            <p class="mt-3 text-sm sm:text-base text-paper/85 leading-relaxed" data-i18n="footer_desc">
+              Interested in discussing Supply Chain, Demand Planning, or Production Planning opportunities? Feel free to reach out directly.
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-3 w-full md:w-auto">
+            <!-- Click-to-Copy Email Button -->
+            <button type="button" onclick="copyEmail()"
+              class="inline-flex items-center justify-center gap-2.5 bg-gelato hover:bg-citrus text-navy font-extrabold text-sm px-6 py-3.5 rounded-2xl transition-all shadow-sm cursor-pointer">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+              </svg>
+              <span>mookkichutamat@gmail.com</span>
+            </button>
+
+            <div class="flex gap-2.5">
+              <a href="https://github.com/Mookki09" target="_blank" rel="noopener noreferrer"
+                class="flex-1 inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white font-bold text-sm px-5 py-3 rounded-2xl border border-white/20 transition-all">
+                <span>GitHub</span>
+                <span>↗</span>
+              </a>
+              <!-- UPDATE LINKEDIN URL HERE: Replace with your real LinkedIn URL -->
+              <a href="https://www.linkedin.com/in/chuthamat-wongsriya-364823445/" target="_blank" ...>
+                class="flex-1 inline-flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white font-bold text-sm px-5 py-3 rounded-2xl border border-white/20 transition-all">
+                <span>LinkedIn</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative z-10 mt-10 pt-6 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-paper/75">
+          <p>© 2026 Chutamat Wongsriya (Mook) • Supply Chain &amp; Data Portfolio</p>
+          <a href="#home" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-gelato font-bold transition-colors">
+            <span data-i18n="back_to_top">Back to Top</span>
+            <span>↑</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- =====================================================================
+       INTERACTIVE LIGHTBOX ALBUM MODAL (Swipe, Keyboard, Thumbnails)
+       ===================================================================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="lbAlbumTitle">
+    <!-- Backdrop -->
+    <div id="lbBackdrop" class="fixed inset-0 bg-navy/88 backdrop-blur-md"></div>
+
+    <!-- Modal Shell -->
+    <div class="relative z-10 w-full max-w-5xl max-h-[94vh] bg-navy border border-seabreeze/30 rounded-[2rem] shadow-2xl flex flex-col overflow-hidden text-paper">
+
+      <!-- Top Header Bar -->
+      <div class="flex items-center justify-between gap-3 px-5 sm:px-7 py-4 border-b border-white/10 bg-navy/95">
+        <div class="min-w-0">
+          <div class="flex items-center gap-2.5">
+            <span id="lbCounter" class="px-2.5 py-0.5 rounded-full bg-citrus text-navy text-xs font-extrabold shrink-0">1 / 6</span>
+            <h3 id="lbAlbumTitle" class="font-serif font-bold text-base sm:text-xl text-gelato truncate">Album Title</h3>
+          </div>
+        </div>
+
+        <button id="lbCloseBtn" type="button" aria-label="Close Lightbox"
+          class="w-10 h-10 rounded-full bg-white/10 hover:bg-citrus hover:text-navy text-white flex items-center justify-center transition-colors shrink-0 cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Main Image Stage (Touch Swipe Enabled) -->
+      <div id="lbStage" class="relative flex-1 min-h-[280px] sm:min-h-[420px] max-h-[60vh] bg-[#0F1E38] flex items-center justify-center p-4 sm:p-6 select-none overflow-hidden">
+
+        <!-- Previous Slide Button -->
+        <button id="lbPrevBtn" type="button" aria-label="Previous Photo"
+          class="absolute left-2 sm:left-4 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/15 hover:bg-citrus hover:text-navy text-white backdrop-blur-sm flex items-center justify-center transition-all shadow-lg cursor-pointer">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+
+        <!-- Full-Size Image (object-contain so certificates & dashboards never crop) -->
+        <img id="lbImage" src="" alt="" class="max-w-full max-h-[54vh] w-auto h-auto object-contain rounded-xl shadow-lg hidden" />
+
+        <!-- Smart Amalfi Missing-Image Fallback in Lightbox -->
+        <div id="lbFallback" class="hidden w-full max-w-lg rounded-2xl bg-gradient-to-br from-amalfi/35 via-navy to-amalfi/20 border-2 border-dashed border-seabreeze/50 p-6 sm:p-10 text-center flex-col items-center justify-center">
+          <div class="w-16 h-16 rounded-2xl bg-seabreeze/20 text-gelato flex items-center justify-center mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <p id="lbFallbackTitle" class="font-bold text-base sm:text-lg text-paper">Photo Caption</p>
+          <p class="text-xs text-seabreeze/90 mt-2" data-i18n="lb_placeholder_hint">Add your image file using this exact path to display it here:</p>
+          <span id="lbFallbackPath" class="mt-3 inline-block px-4 py-1.5 rounded-full bg-paper text-amalfi font-mono text-xs sm:text-sm font-bold shadow">
+            images/file.jpg
+          </span>
+        </div>
+
+        <!-- Next Slide Button -->
+        <button id="lbNextBtn" type="button" aria-label="Next Photo"
+          class="absolute right-2 sm:right-4 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/15 hover:bg-citrus hover:text-navy text-white backdrop-blur-sm flex items-center justify-center transition-all shadow-lg cursor-pointer">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Caption & Filename Strip -->
+      <div class="px-5 sm:px-7 py-3.5 bg-navy/95 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <p id="lbCaption" class="text-sm sm:text-base font-semibold text-paper"></p>
+        <span id="lbFilePill" class="self-start sm:self-auto px-3 py-1 rounded-full bg-white/10 text-seabreeze font-mono text-[11px] shrink-0"></span>
+      </div>
+
+      <!-- Clickable Thumbnail Strip -->
+      <div id="lbThumbs" class="thumb-strip px-5 sm:px-7 py-3 bg-[#10203C] border-t border-white/10 flex items-center gap-2.5 overflow-x-auto">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       CUSTOM TOAST NOTIFICATION (Replaces alert())
+       ===================================================================== -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300 translate-y-3">
+    <div class="bg-navy text-paper text-xs sm:text-sm font-bold px-5 py-3 rounded-full shadow-xl border border-seabreeze/40 flex items-center gap-2">
+      <span class="w-2.5 h-2.5 rounded-full bg-citrus"></span>
+      <span id="toastText">Copied!</span>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       JAVASCRIPT: EASY-TO-EDIT TRANSLATIONS, ALBUMS & INTERACTIVE ENGINE
+       ===================================================================== -->
+  <script>
+    /**
+     * =====================================================================
+     * 1. TRANSLATIONS OBJECT (EN / TH)
+     * Edit any text inside quotes below to customize both English & Thai.
+     * =====================================================================
+     */
+    const TRANSLATIONS = {
+      en: {
+        // Navbar
+        nav_home: "Home",
+        nav_about: "About",
+        nav_skills: "Skills",
+        nav_experience: "Experience",
+        nav_certificates: "Certificates & Gallery",
+
+        // Hero
+        hero_badge: "Open for Full-Time Roles • Supply Chain & Planning",
+        hero_name: "Chutamat Wongsriya",
+        hero_nickname: "(Mook)",
+        hero_subtitle: "SUPPLY CHAIN • DEMAND PLANNING • PRODUCTION PLANNING",
+        hero_cta_exp: "View Experience",
+        hero_cta_cert: "View Certificates & Dashboards",
+        profile_placeholder_label: "Profile Photo",
+        card1_caption: "Mook • Age 22",
+        card2_tag: "Quick Bio",
+        card2_text: "Currently <strong>Logistics Trainee</strong> at Ichikoh Thailand.<br/><br/>Ex-<strong>Demand Planning Intern</strong> at Autoliv Thailand.",
+        card2_foot: "Automotive Supply Chain",
+        card3_tag: "Key Highlights",
+        card3_m1: "Cumulative GPA",
+        card3_m2: "Power BI S&OP Dashboard",
+        card3_m3: "National Conference Presenter",
+        card3_btn: "Preview Dashboards →",
+        card4_tag: "Base",
+        card4_uni: "Burapha University",
+        card4_loc: "Chonburi, Thailand",
+        card4_faculty: "Faculty of Logistics • B.Sc.",
+        pocket_tagline: "Turning supply chain operations & data into measurable clarity.",
+        pocket_badge: "Portfolio • 2026",
+
+        // About & Education
+        about_eyebrow: "About & Education",
+        about_heading_1: "systematic problem-solving meets",
+        about_heading_2: "hands-on planning.",
+        about_tag: "About Me",
+        about_age: "Age 22",
+        about_bio: "Driven and systematic Supply Chain & Logistics Management student passionate about Demand Planning, Production Planning, and Data Analytics. I enjoy building practical automation tools—from Power BI S&OP dashboards to Excel VBA workflows—that simplify daily factory planning and improve operational visibility.",
+        trait_1: "✦ Systematic Thinker",
+        trait_2: "✦ Data Automation",
+        trait_3: "✦ Collaborative",
+
+        edu_title: "Education",
+        edu_badge: "Academic Background",
+        edu_uni_name: "Burapha University",
+        edu_uni_degree: "B.Sc. in Logistics and Supply Chain Management (Supply Chain Engineering Focus)",
+        edu_uni_meta: "Faculty of Logistics • 2023 – Present",
+        edu_uni_courses: "<strong>Relevant Coursework:</strong> Business Data Analytics, Operations Management, Warehousing & Inventory Management, Quality Management, Programming for Data Science.",
+        edu_hs_name: "Triam Udom Suksa School of the Northeast",
+        edu_hs_meta: "โรงเรียนเตรียมอุดมศึกษา ภาคตะวันออกเฉียงเหนือ • Class of 2023 (2566)",
+
+        awards_title: "Awards & Highlights",
+        awards_link: "View Certificates & Photos →",
+        open_photos_short: "3 Photos ↗",
+        award1_title: "Best Inventory Management Award",
+        award1_desc: "Winner for strategic planning in the 2024 Logistics Simulation Game Competition.",
+        award2_title: "SLFTS National Academic Conference Presenter",
+        award2_desc: "Presented the Autoliv Demand & Capacity S&OP Automation project at Burapha University.",
+        award3_title: "Logistics Simulation Game Staff Coordinator",
+        award3_desc: "Coordinated event operations and venue management for the 2025 Simulation Game.",
+
+        // Skills
+        skills_eyebrow: "Capabilities",
+        skills_title: "Skills & Toolkit",
+        skills_subtitle: "Click a category tab to filter my technical, planning, and interpersonal skills.",
+        tab_all: "All",
+        tab_data: "Data & Tools",
+        tab_planning: "Supply Chain & Planning",
+        tab_soft: "Languages & Soft Skills",
+        sk_pbi: "Power BI (Dashboard, DAX)",
+        sk_excel: "Microsoft Excel (Power Query, VBA, XLOOKUP, VLOOKUP, Pivot Tables)",
+        sk_py: "Python (NumPy, Pandas)",
+        sk_sp: "SharePoint",
+        sk_erp: "ERP / Data Hub",
+        sk_office: "MS Office & Canva",
+        sk_dp: "Demand Planning",
+        sk_pp: "Production Planning",
+        sk_supply: "Supply Planning",
+        sk_siop: "SIOP & MPS",
+        sk_shortage: "Material Shortage Tracking",
+        sk_inv: "Inventory Management",
+        sk_forecast: "Statistical Forecasting (SMA, WMA, Regression)",
+        sk_th: "Thai (Native)",
+        sk_en: "English (Intermediate)",
+        sk_ps: "Systematic Problem-Solving",
+        sk_team: "Cross-Functional Teamwork",
+        sk_ai: "Digital & AI Literacy",
+
+        // Experience & Projects
+        exp_eyebrow: "hands-on",
+        exp_badge: "Experience",
+        exp_heading_1: "real factory planning,",
+        exp_heading_2: "automation tools,",
+        exp_heading_3: "and measurable impact.",
+        key_duties_lbl: "Key Duties & Operations",
+        key_achieve_lbl: "Key Achievements & Automation",
+
+        ichikoh_status: "Current Trainee",
+        ichikoh_track: "Production & Supply Planning",
+        ichikoh_role: "Logistics Trainee",
+        ichikoh_m1_val: "Daily",
+        ichikoh_m1_lbl: "Material Check Shortage Reporting",
+        ichikoh_m2_lbl: "Manager Planning Support",
+        ichikoh_b1: "Prepare and verify the <strong>Daily Material Check Shortage Report</strong>, tracking real-time material availability to prevent production line stoppages.",
+        ichikoh_b2: "Support the Logistics Manager in preparing <strong>SIOP</strong> (Sales, Inventory, and Operations Planning) and <strong>MPS</strong> (Master Production Schedule) plans.",
+        ichikoh_b3: "Conduct hands-on <strong>on-site production line coordination</strong>, verifying physical stock status directly on the shop floor alongside manufacturing teams.",
+
+        autoliv_tag: "Featured Internship",
+        autoliv_role: "Demand Planning Intern",
+        autoliv_m1: "Power BI S&OP Hub",
+        autoliv_m2: "Data Mapping Accuracy",
+        autoliv_m3: "User Satisfaction",
+        autoliv_b1: "Built a real-time <strong>5-page Power BI Demand &amp; Capacity Automation Dashboard</strong> with automated email alerts, integrating Power Query, DAX, SharePoint, and ERP data (100% Data Mapping Accuracy, 4.37/5.00 user satisfaction).",
+        autoliv_b2: "Developed an <strong>Excel VBA automation tool</strong> to receive incoming customer demand files and import them into the system significantly faster with fewer manual errors.",
+        autoliv_b3: "Presented this project at the <strong>SLFTS National Academic Conference</strong> at Burapha University.",
+        autoliv_album_btn: "View 5-Page Dashboard & Cert (6 Photos)",
+
+        acad_proj_heading: "Additional Academic Projects",
+        proj1_tag: "Quantitative Forecasting",
+        proj1_title: "Forecasting Thailand’s Instant Noodle Exports",
+        proj1_desc: "Analyzed 24 years of export data (2000–2023) using SMA, WMA, Exponential Smoothing, and Linear Regression to guide production and inventory planning.",
+        proj1_k1: "MAPE (Regression)",
+        proj1_k2: "2024 Forecast Units",
+        proj2_tag: "Quick-Commerce BI",
+        proj2_title: "Blinkit Quick-Commerce Dashboard Project",
+        proj2_desc: "Built an interactive Excel & Power BI dashboard tracking dark-store warehouse inventory levels, rapid shipping times, and member subscriptions for data-driven operations.",
+        proj2_k1: "Delivery SLA Focus",
+        proj2_k2: "Inventory & Shipping",
+
+        // Certificates & Gallery
+        cert_eyebrow: "verified proof of work",
+        cert_badge: "Gallery",
+        cert_title: "Certificates & Photo Albums",
+        cert_subtitle: "Click any album card or thumbnail below to browse full-size certificates, Power BI dashboard pages, and event photos.",
+        open_album: "Open Album →",
+        photos_unit: "Photos",
+        lb_placeholder_hint: "Add your image file using this exact path to display it here:",
+
+        // Footer & Toast
+        footer_badge: "Ready to Contribute",
+        footer_title: "Let’s connect!",
+        footer_desc: "Interested in discussing Supply Chain, Demand Planning, or Production Planning opportunities? Feel free to reach out directly.",
+        back_to_top: "Back to Top",
+        toast_email: "Email copied: mookkichutamat@gmail.com"
+      },
+
+      th: {
+        // Navbar
+        nav_home: "หน้าแรก",
+        nav_about: "เกี่ยวกับฉัน",
+        nav_skills: "ทักษะ",
+        nav_experience: "ประสบการณ์",
+        nav_certificates: "เกียรติบัตรและคลังภาพ",
+
+        // Hero
+        hero_badge: "พร้อมเริ่มงานประจำ • สายงาน Supply Chain และวางแผน",
+        hero_name: "จุฑามาศ วงศ์ศรียา",
+        hero_nickname: "(มุก)",
+        hero_subtitle: "SUPPLY CHAIN • DEMAND PLANNING • PRODUCTION PLANNING",
+        hero_cta_exp: "ดูประสบการณ์ฝึกงาน",
+        hero_cta_cert: "ดูเกียรติบัตรและแดชบอร์ด",
+        profile_placeholder_label: "รูปโปรไฟล์",
+        card1_caption: "มุก • อายุ 22 ปี",
+        card2_tag: "ประวัติย่อ",
+        card2_text: "ปัจจุบัน: <strong>นักศึกษาฝึกงาน Logistics</strong> ที่ Ichikoh Thailand<br/><br/>อดีต: <strong>นักศึกษาฝึกงาน Demand Planning</strong> ที่ Autoliv Thailand",
+        card2_foot: "สายซัพพลายเชนยานยนต์",
+        card3_tag: "จุดเด่นสำคัญ",
+        card3_m1: "เกรดเฉลี่ยสะสม (GPA)",
+        card3_m2: "Power BI S&OP 5 หน้า",
+        card3_m3: "ผู้นำเสนองานวิชาการระดับชาติ",
+        card3_btn: "เปิดดูแดชบอร์ด →",
+        card4_tag: "สถาบัน",
+        card4_uni: "มหาวิทยาลัยบูรพา",
+        card4_loc: "ชลบุรี, ประเทศไทย",
+        card4_faculty: "คณะโลจิสติกส์ • วท.บ.",
+        pocket_tagline: "เปลี่ยนข้อมูลและงานซัพพลายเชนหน้างานให้เป็นผลลัพธ์ที่ชัดเจน",
+        pocket_badge: "พอร์ตโฟลิโอ • 2569",
+
+        // About & Education
+        about_eyebrow: "เกี่ยวกับฉันและการศึกษา",
+        about_heading_1: "ผสานการคิดวิเคราะห์อย่างเป็นระบบเข้ากับ",
+        about_heading_2: "งานวางแผนหน้างานจริง",
+        about_tag: "เกี่ยวกับฉัน",
+        about_age: "อายุ 22 ปี",
+        about_bio: "นักศึกษาสาขาการจัดการโลจิสติกส์และโซ่อุปทานที่มีความมุ่งมั่นและคิดแก้ปัญหาอย่างเป็นระบบ สนใจงานสาย Supply Chain, Demand Planning, Production Planning และ Data Analytics ชื่นชอบการพัฒนาเครื่องมืออัตโนมัติทั้ง Power BI S&OP Dashboard และ Excel VBA เพื่อช่วยให้การวางแผนโรงงานรวดเร็วและแม่นยำขึ้น",
+        trait_1: "✦ คิดวิเคราะห์เป็นระบบ",
+        trait_2: "✦ ระบบข้อมูลอัตโนมัติ",
+        trait_3: "✦ ทำงานร่วมกับทีมได้ดี",
+
+        edu_title: "ประวัติการศึกษา",
+        edu_badge: "เส้นทางการเรียน",
+        edu_uni_name: "มหาวิทยาลัยบูรพา",
+        edu_uni_degree: "วิทยาศาสตรบัณฑิต สาขาการจัดการโลจิสติกส์และโซ่อุปทาน (แขนงวิศวกรรมโซ่อุปทาน)",
+        edu_uni_meta: "คณะโลจิสติกส์ • พ.ศ. 2566 – ปัจจุบัน",
+        edu_uni_courses: "<strong>วิชาที่เกี่ยวข้อง:</strong> การวิเคราะห์ข้อมูลธุรกิจ (Business Data Analytics), การจัดการการดำเนินงาน, การจัดการคลังสินค้าและสินค้าคงคลัง, การจัดการคุณภาพ, การเขียนโปรแกรมสำหรับวิทยาการข้อมูล",
+        edu_hs_name: "โรงเรียนเตรียมอุดมศึกษา ภาคตะวันออกเฉียงเหนือ",
+        edu_hs_meta: "Triam Udom Suksa School of the Northeast • จบปีการศึกษา 2566",
+
+        awards_title: "รางวัลและความภาคภูมิใจ",
+        awards_link: "ดูเกียรติบัตรและรูปภาพทั้งหมด →",
+        open_photos_short: "3 รูป ↗",
+        award1_title: "รางวัลชนะเลิศ Best Inventory Management",
+        award1_desc: "รางวัลวางแผนจัดการสินค้าคงคลังยอดเยี่ยมจากการแข่งขัน Simulation Game 2024",
+        award2_title: "ผู้นำเสนอผลงานวิชาการระดับชาติ SLFTS",
+        award2_desc: "นำเสนอโปรเจกต์ระบบอัตโนมัติ Demand & Capacity S&OP จาก Autoliv ที่มหาวิทยาลัยบูรพา",
+        award3_title: "คณะผู้จัดงาน (Staff) Logistics Simulation Game",
+        award3_desc: "ประสานงานและดูแลการจัดกิจกรรม Logistics Simulation Game ประจำปี 2025",
+
+        // Skills
+        skills_eyebrow: "ความสามารถ",
+        skills_title: "ทักษะและเครื่องมือ",
+        skills_subtitle: "คลิกเลือกหมวดหมู่เพื่อดูทักษะด้านเครื่องมือวิเคราะห์ข้อมูล งานวางแผนซัพพลายเชน และทักษะการทำงาน",
+        tab_all: "ทั้งหมด",
+        tab_data: "เครื่องมือและข้อมูล",
+        tab_planning: "ซัพพลายเชนและวางแผน",
+        tab_soft: "ภาษาและทักษะเสริม",
+        sk_pbi: "Power BI (Dashboard, DAX)",
+        sk_excel: "Microsoft Excel (Power Query, VBA, XLOOKUP, VLOOKUP, Pivot Tables)",
+        sk_py: "Python (NumPy, Pandas)",
+        sk_sp: "SharePoint",
+        sk_erp: "ERP / Data Hub",
+        sk_office: "MS Office และ Canva",
+        sk_dp: "การวางแผนความต้องการ (Demand Planning)",
+        sk_pp: "การวางแผนการผลิต (Production Planning)",
+        sk_supply: "การวางแผนจัดหา (Supply Planning)",
+        sk_siop: "SIOP และ MPS",
+        sk_shortage: "ติดตามวัตถุดิบขาดแคลน (Shortage Tracking)",
+        sk_inv: "การจัดการสินค้าคงคลัง (Inventory Management)",
+        sk_forecast: "การพยากรณ์เชิงสถิติ (SMA, WMA, Regression)",
+        sk_th: "ภาษาไทย (เจ้าของภาษา)",
+        sk_en: "ภาษาอังกฤษ (ระดับกลาง)",
+        sk_ps: "การแก้ปัญหาอย่างเป็นระบบ",
+        sk_team: "การทำงานร่วมกับหลายแผนก",
+        sk_ai: "ทักษะด้านดิจิทัลและ AI",
+
+        // Experience & Projects
+        exp_eyebrow: "ประสบการณ์จริง",
+        exp_badge: "ฝึกงานและผลงาน",
+        exp_heading_1: "จากหน้างานโรงงานสู่",
+        exp_heading_2: "ระบบข้อมูลอัตโนมัติ",
+        exp_heading_3: "และผลลัพธ์ที่วัดผลได้",
+        key_duties_lbl: "หน้าที่ความรับผิดชอบหลัก",
+        key_achieve_lbl: "ผลงานเด่นและระบบอัตโนมัติ",
+
+        ichikoh_status: "กำลังฝึกงาน",
+        ichikoh_track: "Production & Supply Planning",
+        ichikoh_role: "นักศึกษาฝึกงานแผนก Logistics",
+        ichikoh_m1_val: "รายวัน",
+        ichikoh_m1_lbl: "รายงาน Check Shortage วัตถุดิบ",
+        ichikoh_m2_lbl: "สนับสนุนแผนงาน Manager",
+        ichikoh_b1: "จัดทำและตรวจสอบ <strong>Check Shortage Report</strong> ประจำวัน เพื่อเช็กความพร้อมของวัตถุดิบในแต่ละวันและป้องกันไลน์ผลิตหยุดชะงัก",
+        ichikoh_b2: "ช่วยผู้จัดการในการจัดทำแผน <strong>SIOP</strong> และแผนการผลิตหลัก <strong>MPS</strong>",
+        ichikoh_b3: "ลงพื้นที่ตรวจสอบหน้างานใน <strong>ไลน์การผลิตจริง</strong> พร้อมประสานงานกับฝ่ายผลิตและคลังสินค้า",
+
+        autoliv_tag: "ฝึกงานผลงานเด่น",
+        autoliv_role: "นักศึกษาฝึกงานแผนก Demand Planning",
+        autoliv_m1: "Power BI S&OP 5 หน้า",
+        autoliv_m2: "ความแม่นยำจับคู่ข้อมูล",
+        autoliv_m3: "คะแนนความพึงพอใจผู้ใช้",
+        autoliv_b1: "พัฒนา <strong>Power BI Demand &amp; Capacity Automation Dashboard แบบเรียลไทม์ 5 หน้า</strong> พร้อมระบบแจ้งเตือนอีเมลอัตโนมัติ เชื่อมโยง Power Query, DAX, SharePoint และ ERP (ความแม่นยำจับคู่ข้อมูล 100%, ความพึงพอใจผู้ใช้ 4.37/5.00)",
+        autoliv_b2: "พัฒนาไฟล์ <strong>Excel VBA</strong> สำหรับรับข้อมูลลูกค้าและนำข้อมูลเข้าระบบได้อย่างรวดเร็ว ลดขั้นตอนและข้อผิดพลาดจากการทำมือ",
+        autoliv_b3: "นำเสนอผลงานโปรเจกต์นี้ใน <strong>งานประชุมวิชาการระดับชาติ SLFTS</strong> มหาวิทยาลัยบูรพา",
+        autoliv_album_btn: "ดูแดชบอร์ด 5 หน้าและเกียรติบัตร (6 รูป)",
+
+        acad_proj_heading: "โปรเจกต์วิชาการเพิ่มเติม",
+        proj1_tag: "การพยากรณ์เชิงปริมาณ",
+        proj1_title: "การพยากรณ์การส่งออกบะหมี่กึ่งสำเร็จรูปของไทย",
+        proj1_desc: "วิเคราะห์ข้อมูลส่งออกปี 2000–2023 ด้วยวิธี SMA, WMA, Exponential Smoothing และ Linear Regression เพื่อใช้วางแผนการผลิตและสินค้าคงคลัง",
+        proj1_k1: "ค่าคลาดเคลื่อน MAPE",
+        proj1_k2: "ยอดพยากรณ์ปี 2024 (หน่วย)",
+        proj2_tag: "Quick-Commerce BI",
+        proj2_title: "แดชบอร์ดวิเคราะห์ธุรกิจ Blinkit Quick-Commerce",
+        proj2_desc: "พัฒนาแดชบอร์ดอินเทอร์แอกทีฟด้วย Excel และ Power BI เพื่อติดตามระดับสต็อกคลังสินค้า ระยะเวลาจัดส่ง และยอดสมาชิกเพื่อการตัดสินใจจากข้อมูล",
+        proj2_k1: "ติดตามมาตรฐานเวลาส่ง",
+        proj2_k2: "KPI สต็อกและการจัดส่ง",
+
+        // Certificates & Gallery
+        cert_eyebrow: "หลักฐานผลงานจริง",
+        cert_badge: "คลังภาพ",
+        cert_title: "เกียรติบัตรและอัลบั้มผลงาน",
+        cert_subtitle: "คลิกที่การ์ดอัลบั้มหรือรูปตัวอย่างด้านล่าง เพื่อขยายดูเกียรติบัตร หน้าจอ Power BI Dashboard และภาพกิจกรรมแบบเต็มจอ",
+        open_album: "เปิดดูอัลบั้ม →",
+        photos_unit: "รูป",
+        lb_placeholder_hint: "วางไฟล์รูปของคุณในโฟลเดอร์ตามชื่อไฟล์ด้านล่างนี้เพื่อแสดงภาพจริง:",
+
+        // Footer & Toast
+        footer_badge: "พร้อมร่วมงานกับทีมของคุณ",
+        footer_title: "ยินดีที่ได้รู้จักค่ะ!",
+        footer_desc: "หากสนใจพูดคุยเกี่ยวกับตำแหน่งงานสาย Supply Chain, Demand Planning หรือ Production Planning สามารถติดต่อได้โดยตรงตามช่องทางด้านล่างนี้เลยค่ะ",
+        back_to_top: "กลับขึ้นด้านบน",
+        toast_email: "คัดลอกอีเมลเรียบร้อย: mookkichutamat@gmail.com"
+      }
+    };
+
+    /**
+     * =====================================================================
+     * 2. ALBUMS DATA OBJECT (4 Multi-Photo Albums = 15 Photos Total)
+     * To add/edit photos or captions, simply update the items inside ALBUMS.
+     * =====================================================================
+     */
+    const ALBUMS = [
+      {
+        id: "autoliv",
+        accentColor: "#2E5AA7", // Amalfi Tile
+        borderColor: "#86C5FF",
+        tag: { en: "Internship & BI", th: "ฝึกงานและแดชบอร์ด" },
+        title: {
+          en: "Autoliv Thailand — Internship Certificate & 5-Page Power BI Dashboard",
+          th: "บริษัท ออโตลิฟ (ประเทศไทย) — เกียรติบัตรฝึกงานและ Power BI Dashboard 5 หน้า"
+        },
+        subtitle: {
+          en: "Includes official completion certificate and all 5 sanitized S&OP dashboard pages.",
+          th: "รวมเกียรติบัตรการฝึกงานและภาพหน้าจอ Power BI S&OP Dashboard ครบทั้ง 5 หน้า"
+        },
+        slides: [
+          {
+            src: "images/cert-autoliv.jpg",
+            shortLabel: "Cert",
+            caption: {
+              en: "Internship Certificate — Autoliv Thailand",
+              th: "เกียรติบัตรฝึกงาน — บริษัท ออโตลิฟ (ประเทศไทย)"
+            }
+          },
+          {
+            src: "images/autoliv-dash-1.jpg",
+            shortLabel: "P1",
+            caption: {
+              en: "Power BI Dashboard — Cumulative Demand and Capacity",
+              th: "หน้าจอ Power BI Dashboard — Cumulative Demand and Capacity"
+            }
+          },
+          {
+            src: "images/autoliv-dash-2.jpg",
+            shortLabel: "P2",
+            caption: {
+              en: "Power BI Dashboard — Demand and Capacity weekly",
+              th: "หน้าจอ Power BI Dashboard — Demand and Capacity weekly"
+            }
+          },
+          {
+            src: "images/autoliv-dash-3.jpg",
+            shortLabel: "P3",
+            caption: {
+              en: "Power BI Dashboard — Behind Order Analysis",
+              th: "หน้าจอ Power BI Dashboard — Behind Order Analysis"
+            }
+          },
+          {
+            src: "images/autoliv-dash-4.jpg",
+            shortLabel: "P4",
+            caption: {
+              en: "Power BI Dashboard — Customer Ratio",
+              th: "หน้าจอ Power BI Dashboard — Customer Ratio"
+            }
+          },
+          {
+            src: "images/autoliv-dash-5.jpg",
+            shortLabel: "P5",
+            caption: {
+              en: "Power BI Dashboard — Demand Comparison",
+              th: "หน้าจอ Power BI Dashboard — Demand Comparison"
+            }
+          }
+        ]
+      },
+      {
+        id: "conference",
+        accentColor: "#FFA62B", // Citrus Zest
+        borderColor: "#86C5FF",
+        tag: { en: "National Conference", th: "งานวิชาการระดับชาติ" },
+        title: {
+          en: "SLFTS National Academic Conference — Burapha University",
+          th: "งานประชุมวิชาการระดับชาติ SLFTS — มหาวิทยาลัยบูรพา"
+        },
+        subtitle: {
+          en: "Presenter certificate, certificate receiving moment, and on-stage presentation.",
+          th: "เกียรติบัตรผู้นำเสนอผลงาน ภาพรับเกียรติบัตร และภาพบรรยากาศการนำเสนองานวิจัย"
+        },
+        slides: [
+          {
+            src: "images/cert-conference.jpg",
+            shortLabel: "Cert",
+            caption: {
+              en: "Conference Presenter Certificate — SLFTS",
+              th: "เกียรติบัตรผู้นำเสนอผลงานวิชาการระดับชาติ SLFTS"
+            }
+          },
+          {
+            src: "images/conference-award.jpg",
+            shortLabel: "Award",
+            caption: {
+              en: "Certificate Receiving Moment — SLFTS",
+              th: "ภาพบรรยากาศการรับเกียรติบัตรงานวิชาการ SLFTS"
+            }
+          },
+          {
+            src: "images/conference-present.jpg",
+            shortLabel: "Stage",
+            caption: {
+              en: "Project Presentation on Stage — SLFTS",
+              th: "ภาพบรรยากาศการนำเสนอผลงานวิจัย Autoliv"
+            }
+          }
+        ]
+      },
+      {
+        id: "competition",
+        accentColor: "#FFA62B", // Citrus Zest
+        borderColor: "#F8E6A0",
+        tag: { en: "1st Place Award", th: "รางวัลแข่งขัน" },
+        title: {
+          en: "Logistics Simulation Game Competition — Best Inventory Management",
+          th: "การแข่งขัน Logistics Simulation Game — รางวัล Best Inventory Management"
+        },
+        subtitle: {
+          en: "Winner certificate and 2 award ceremony photographs from the 2024 competition.",
+          th: "เกียรติบัตรรางวัลชนะเลิศและภาพบรรยากาศการรับรางวัลจำนวน 2 ภาพ"
+        },
+        slides: [
+          {
+            src: "images/cert-competition.jpg",
+            shortLabel: "Cert",
+            caption: {
+              en: "Best Inventory Management Award Certificate",
+              th: "เกียรติบัตรรางวัลชนะเลิศ Best Inventory Management"
+            }
+          },
+          {
+            src: "images/competition-award-1.jpg",
+            shortLabel: "Pic 1",
+            caption: {
+              en: "Award Ceremony — Photo 1",
+              th: "ภาพรับรางวัลการแข่งขัน Simulation Game (รูปที่ 1)"
+            }
+          },
+          {
+            src: "images/competition-award-2.jpg",
+            shortLabel: "Pic 2",
+            caption: {
+              en: "Award Ceremony — Photo 2",
+              th: "ภาพรับรางวัลการแข่งขัน Simulation Game (รูปที่ 2)"
+            }
+          }
+        ]
+      },
+      {
+        id: "staff",
+        accentColor: "#2E5AA7", // Amalfi Tile
+        borderColor: "#F8E6A0",
+        tag: { en: "Leadership & Staff", th: "กิจกรรมและสตาฟ" },
+        title: {
+          en: "Logistics Simulation Game — Staff Event Coordinator",
+          th: "คณะผู้จัดงาน (Staff) — กิจกรรม Logistics Simulation Game"
+        },
+        subtitle: {
+          en: "Official staff coordinator certificate and 2 event coordination activity photos.",
+          th: "เกียรติบัตรคณะผู้จัดงานและภาพบรรยากาศการทำหน้าที่สตาฟกิจกรรมจำนวน 2 ภาพ"
+        },
+        slides: [
+          {
+            src: "images/cert-staff.jpg",
+            shortLabel: "Cert",
+            caption: {
+              en: "Staff Event Coordinator Certificate",
+              th: "เกียรติบัตรคณะผู้จัดงาน (Staff) Simulation Game"
+            }
+          },
+          {
+            src: "images/staff-activity-1.jpg",
+            shortLabel: "Act 1",
+            caption: {
+              en: "Event Coordination Activity — Photo 1",
+              th: "ภาพบรรยากาศการทำหน้าที่สตาฟกิจกรรม (รูปที่ 1)"
+            }
+          },
+          {
+            src: "images/staff-activity-2.jpg",
+            shortLabel: "Act 2",
+            caption: {
+              en: "Event Coordination Activity — Photo 2",
+              th: "ภาพบรรยากาศการทำหน้าที่สตาฟกิจกรรม (รูปที่ 2)"
+            }
+          }
+        ]
+      }
+    ];
+
+    /* =====================================================================
+       3. STATE MANAGEMENT
+       ===================================================================== */
+    let currentLang = 'en';
+    let activeAlbum = null;
+    let activeSlideIndex = 0;
+
+    /* =====================================================================
+       4. RENDER 2x2 CERTIFICATES & PHOTO ALBUMS GRID
+       ===================================================================== */
+    function renderAlbumGrid() {
+      const grid = document.getElementById('albumGrid');
+      const dict = TRANSLATIONS[currentLang];
+
+      grid.innerHTML = ALBUMS.map(album => {
+        const cover = album.slides[0];
+        const countText = `${album.slides.length} ${dict.photos_unit}`;
+
+        // Mini thumbnail strip preview of all slides inside the album
+        const miniThumbsHTML = album.slides.map((slide, idx) => `
+          <button
+            type="button"
+            onclick="event.stopPropagation(); openAlbum('${album.id}', ${idx})"
+            title="${slide.caption[currentLang]} (${slide.src})"
+            class="relative h-11 flex-1 min-w-[44px] rounded-xl overflow-hidden bg-paper border border-seabreeze/60 hover:border-citrus transition-all cursor-pointer group/thumb">
+            <img
+              src="${slide.src}"
+              alt="${slide.caption[currentLang]}"
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-300"
+              onload="this.classList.remove('opacity-0'); this.nextElementSibling.classList.add('hidden');"
+              onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+            />
+            <div class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-seabreeze/20 to-gelato/35 text-[10px] font-extrabold text-amalfi group-hover/thumb:text-navy px-1">
+              <span>${slide.shortLabel}</span>
+            </div>
+          </button>
+        `).join('');
+
+        return `
+          <article
+            onclick="openAlbum('${album.id}', 0)"
+            class="group cursor-pointer bg-white rounded-[2rem] p-4 sm:p-5 shadow-soft border-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-card flex flex-col justify-between"
+            style="border-color: ${album.borderColor};">
+            <div>
+              <!-- Cover Certificate Preview (object-contain + Smart Missing-Image Fallback) -->
+              <div class="relative aspect-[16/10] w-full rounded-[1.35rem] overflow-hidden bg-paper border border-seabreeze/45">
+                <!-- Photo Count Floating Badge -->
+                <span class="absolute top-3 right-3 z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-navy/85 backdrop-blur-sm text-gelato text-xs font-extrabold shadow">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  ${countText}
+                </span>
+
+                <!-- Real Cover Image -->
+                <img
+                  src="${cover.src}"
+                  alt="${cover.caption[currentLang]}"
+                  class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-all duration-300 group-hover:scale-[1.03]"
+                  onload="this.classList.remove('opacity-0'); this.nextElementSibling.classList.add('hidden');"
+                  onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+                />
+
+                <!-- Smart Amalfi Missing-Image Fallback -->
+                <div class="w-full h-full flex flex-col items-center justify-center text-center p-5 bg-gradient-to-br from-seabreeze/20 via-paper to-gelato/45 border-2 border-dashed border-amalfi/25 rounded-[1.35rem]">
+                  <div class="w-12 h-12 rounded-2xl bg-white shadow-sm text-amalfi flex items-center justify-center mb-2.5 group-hover:scale-105 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <p class="text-xs sm:text-sm font-bold text-navy max-w-xs leading-snug">${cover.caption[currentLang]}</p>
+                  <span class="mt-2 px-3 py-0.5 rounded-full bg-white/90 border border-amalfi/25 font-mono text-[11px] font-semibold text-amalfi">
+                    ${cover.src}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Mini Thumbnail Strip Preview -->
+              <div class="mt-3 flex items-center gap-1.5">
+                ${miniThumbsHTML}
+              </div>
+
+              <!-- Category Tag + Title -->
+              <div class="mt-4">
+                <span class="inline-block text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-paper border border-navy/10" style="color: ${album.accentColor};">
+                  ${album.tag[currentLang]}
+                </span>
+                <h3 class="mt-2 font-serif font-bold text-lg sm:text-xl text-navy leading-snug group-hover:text-amalfi transition-colors">
+                  ${album.title[currentLang]}
+                </h3>
+                <p class="mt-1.5 text-xs sm:text-sm text-navy/70 leading-relaxed">
+                  ${album.subtitle[currentLang]}
+                </p>
+              </div>
+            </div>
+
+            <!-- Card Footer Cue -->
+            <div class="mt-5 pt-3.5 border-t border-navy/10 flex items-center justify-between">
+              <span class="text-xs font-mono text-navy/55">${cover.src}</span>
+              <span class="inline-flex items-center gap-1 text-xs sm:text-sm font-extrabold text-amalfi group-hover:text-citrus transition-colors">
+                ${dict.open_album}
+              </span>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    /* =====================================================================
+       5. INTERACTIVE LIGHTBOX ALBUM VIEWER (Swipe + Keyboard + Thumbnails)
+       ===================================================================== */
+    const lbModal = document.getElementById('lightboxModal');
+    const lbBackdrop = document.getElementById('lbBackdrop');
+    const lbCloseBtn = document.getElementById('lbCloseBtn');
+    const lbPrevBtn = document.getElementById('lbPrevBtn');
+    const lbNextBtn = document.getElementById('lbNextBtn');
+    const lbStage = document.getElementById('lbStage');
+    const lbImage = document.getElementById('lbImage');
+    const lbFallback = document.getElementById('lbFallback');
+    const lbFallbackTitle = document.getElementById('lbFallbackTitle');
+    const lbFallbackPath = document.getElementById('lbFallbackPath');
+    const lbCounter = document.getElementById('lbCounter');
+    const lbAlbumTitle = document.getElementById('lbAlbumTitle');
+    const lbCaption = document.getElementById('lbCaption');
+    const lbFilePill = document.getElementById('lbFilePill');
+    const lbThumbs = document.getElementById('lbThumbs');
+
+    function openAlbum(albumId, startIndex = 0) {
+      const found = ALBUMS.find(a => a.id === albumId);
+      if (!found) return;
+
+      activeAlbum = found;
+      activeSlideIndex = Math.max(0, Math.min(startIndex, found.slides.length - 1));
+
+      lbModal.classList.remove('hidden');
+      lbModal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+
+      renderLightboxSlide();
+    }
+
+    function closeLightbox() {
+      lbModal.classList.add('hidden');
+      lbModal.classList.remove('flex');
+      document.body.style.overflow = '';
+      activeAlbum = null;
+    }
+
+    function stepSlide(delta) {
+      if (!activeAlbum) return;
+      const total = activeAlbum.slides.length;
+      activeSlideIndex = (activeSlideIndex + delta + total) % total;
+      renderLightboxSlide();
+    }
+
+    function renderLightboxSlide() {
+      if (!activeAlbum) return;
+      const slide = activeAlbum.slides[activeSlideIndex];
+      const total = activeAlbum.slides.length;
+
+      // Update metadata
+      lbCounter.textContent = `${activeSlideIndex + 1} / ${total}`;
+      lbAlbumTitle.textContent = activeAlbum.title[currentLang];
+      lbCaption.textContent = slide.caption[currentLang];
+      lbFilePill.textContent = slide.src;
+      lbFallbackTitle.textContent = slide.caption[currentLang];
+      lbFallbackPath.textContent = slide.src;
+
+      // Show fallback immediately while testing if real file exists (zero broken-image flash)
+      lbImage.classList.add('hidden');
+      lbFallback.classList.remove('hidden');
+      lbFallback.classList.add('flex');
+
+      // Attach fresh load/error handlers for this slide
+      lbImage.onload = function () {
+        lbFallback.classList.add('hidden');
+        lbFallback.classList.remove('flex');
+        lbImage.classList.remove('hidden');
+      };
+      lbImage.onerror = function () {
+        lbImage.classList.add('hidden');
+        lbFallback.classList.remove('hidden');
+        lbFallback.classList.add('flex');
+      };
+
+      lbImage.alt = slide.caption[currentLang];
+      lbImage.src = slide.src;
+
+      // Render clickable bottom thumbnail strip
+      lbThumbs.innerHTML = activeAlbum.slides.map((s, idx) => {
+        const isActive = idx === activeSlideIndex;
+        return `
+          <button
+            type="button"
+            onclick="activeSlideIndex=${idx}; renderLightboxSlide();"
+            class="relative shrink-0 w-20 h-14 rounded-xl overflow-hidden transition-all cursor-pointer ${
+              isActive
+                ? 'ring-2 ring-citrus scale-105 bg-amalfi/40'
+                : 'opacity-70 hover:opacity-100 bg-white/10 border border-white/15'
+            }">
+            <img
+              src="${s.src}"
+              alt="${s.caption[currentLang]}"
+              class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-200"
+              onload="this.classList.remove('opacity-0'); this.nextElementSibling.classList.add('hidden');"
+              onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+            />
+            <div class="w-full h-full flex flex-col items-center justify-center text-center px-1">
+              <span class="text-[11px] font-extrabold ${isActive ? 'text-gelato' : 'text-seabreeze'}">${s.shortLabel}</span>
+              <span class="text-[9px] text-paper/70 font-mono truncate max-w-full">#${idx + 1}</span>
+            </div>
+          </button>
+        `;
+      }).join('');
+    }
+
+    // Lightbox Event Listeners
+    lbCloseBtn.addEventListener('click', closeLightbox);
+    lbBackdrop.addEventListener('click', closeLightbox);
+    lbPrevBtn.addEventListener('click', () => stepSlide(-1));
+    lbNextBtn.addEventListener('click', () => stepSlide(1));
+
+    // Keyboard Navigation (ArrowLeft, ArrowRight, Escape)
+    document.addEventListener('keydown', (e) => {
+      if (!activeAlbum) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') stepSlide(-1);
+      if (e.key === 'ArrowRight') stepSlide(1);
+    });
+
+    // Mobile Touch Swipe Support inside Lightbox Stage
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    lbStage.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lbStage.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 45) {
+        if (diff > 0) stepSlide(1);   // Swipe left -> Next
+        else stepSlide(-1);           // Swipe right -> Prev
+      }
+    }, { passive: true });
+
+    /* =====================================================================
+       6. BILINGUAL SWITCHER ENGINE (EN / TH)
+       ===================================================================== */
+    function setLanguage(lang) {
+      currentLang = lang;
+      const dict = TRANSLATIONS[lang];
+
+      // Update all elements tagged with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) {
+          el.innerHTML = dict[key];
+        }
+      });
+
+      document.body.classList.toggle('lang-th', lang === 'th');
+      document.documentElement.lang = lang;
+
+      // Update EN | TH toggle pill styling
+      const btnEN = document.getElementById('langEN');
+      const btnTH = document.getElementById('langTH');
+      if (lang === 'en') {
+        btnEN.className = 'px-2.5 py-1 rounded-full bg-amalfi text-white transition-all';
+        btnTH.className = 'px-2.5 py-1 rounded-full text-navy/65 transition-all';
+      } else {
+        btnTH.className = 'px-2.5 py-1 rounded-full bg-amalfi text-white transition-all';
+        btnEN.className = 'px-2.5 py-1 rounded-full text-navy/65 transition-all';
+      }
+
+      // Re-render Album Grid & Active Lightbox in selected language
+      renderAlbumGrid();
+      if (activeAlbum) {
+        renderLightboxSlide();
+      }
+    }
+
+    document.getElementById('langToggle').addEventListener('click', () => {
+      setLanguage(currentLang === 'en' ? 'th' : 'en');
+    });
+
+    /* =====================================================================
+       7. SKILLS CATEGORY FILTER TABS
+       ===================================================================== */
+    const skillTabs = document.querySelectorAll('.skill-tab');
+    const skillPills = document.querySelectorAll('#skillsCloud .skill-pill');
+
+    skillTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const filter = tab.getAttribute('data-filter');
+
+        skillTabs.forEach(t => {
+          t.className = 'skill-tab px-3.5 py-1.5 rounded-full text-xs font-bold text-navy hover:bg-white/70 transition-all cursor-pointer';
+        });
+        tab.className = 'skill-tab px-3.5 py-1.5 rounded-full text-xs font-bold bg-navy text-white shadow-sm transition-all cursor-pointer';
+
+        skillPills.forEach(pill => {
+          const cat = pill.getAttribute('data-cat');
+          pill.style.display = (filter === 'all' || cat === filter) ? 'inline-flex' : 'none';
+        });
+      });
+    });
+
+    /* =====================================================================
+       8. MOBILE MENU TOGGLE
+       ===================================================================== */
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const closeMenuIcon = document.getElementById('closeMenuIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const hidden = mobileMenu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden', !hidden);
+      closeMenuIcon.classList.toggle('hidden', hidden);
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeMenuIcon.classList.add('hidden');
+      });
+    });
+
+    /* =====================================================================
+       9. COPY EMAIL WITH CUSTOM TOAST (No alert())
+       ===================================================================== */
+    let toastTimeout;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastText').textContent = msg;
+      toast.classList.remove('opacity-0', 'translate-y-3');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-3');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 2800);
+    }
+
+    function copyEmail() {
+      const email = 'mookkichutamat@gmail.com';
+      try {
+        const temp = document.createElement('input');
+        temp.value = email;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        showToast(TRANSLATIONS[currentLang].toast_email);
+      } catch (err) {
+        window.location.href = 'mailto:' + email;
+      }
+    }
+
+    /* =====================================================================
+       10. SCROLL REVEAL & ACTIVE NAVBAR TRACKING
+       ===================================================================== */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    const trackedSections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = 'home';
+      const offset = window.scrollY + 180;
+      trackedSections.forEach(sec => {
+        if (offset >= sec.offsetTop) {
+          current = sec.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    }, { passive: true });
+
+    // Initialize Gallery on Page Load
+    renderAlbumGrid();
+  </script>
+</body>
+</html>
